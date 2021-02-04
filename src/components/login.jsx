@@ -49,10 +49,11 @@ class Login extends React.PureComponent {
             value={password}
             handleChange={this.handleChange}
             required
+            autoComplete="on"
           />
           <div className="buttons">
-            <CustomButton type="submit">Login</CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignin>
+            <CustomButton type="submit">LOGIN</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
               Sign in with Google
             </CustomButton>
           </div>
