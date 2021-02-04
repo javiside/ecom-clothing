@@ -5,13 +5,17 @@ import "./App.css";
 
 import HomePage from "./pages/homepage";
 import ShopPage from "./pages/shop";
+import Header from "./components/header.jsx";
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/shop" component={ShopPage} />
-    </Switch>
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/shop" component={ShopPage} />
+      </Switch>
+    </>
   );
 }
 
