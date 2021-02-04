@@ -3,7 +3,7 @@ import React from "react";
 import FormInput from "./form-input";
 import CustomButton from "./custom-button";
 
-import { signInWithGoogle } from "../firebase/firebase.utils";
+import { auth, signInWithGoogle } from "../firebase/firebase.utils";
 
 import "./login.scss";
 
@@ -14,12 +14,21 @@ class Login extends React.PureComponent {
     this.state = {
       email: "",
       password: "",
+      error: "",
     };
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    this.setState({ email: "", password: "" });
+
+    const { email, password } = this.state;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "", error: "" });
+    } catch ({ message }) {
+      this.setState({ error: message });
+    }
   };
 
   handleChange = (event) => {
@@ -28,11 +37,12 @@ class Login extends React.PureComponent {
   };
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, error } = this.state;
     return (
       <div className="login">
         <h2>I already have an account</h2>
         <span>Login with your email and password</span>
+        <span className="login-error">{error.toUpperCase()}</span>
         <form onSubmit={this.handleSubmit}>
           <FormInput
             name="email"

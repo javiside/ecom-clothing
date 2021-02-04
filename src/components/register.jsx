@@ -16,6 +16,7 @@ class Register extends React.PureComponent {
       email: "",
       password: "",
       confirmPassword: "",
+      error: "",
     };
   }
 
@@ -39,9 +40,10 @@ class Register extends React.PureComponent {
         email: "",
         password: "",
         confirmPassword: "",
+        error: "",
       });
-    } catch (err) {
-      console.log(err);
+    } catch ({ message }) {
+      this.setState({ error: message });
     }
   };
 
@@ -51,11 +53,12 @@ class Register extends React.PureComponent {
   };
 
   render() {
-    const { displayName, email, password, confirmPassword } = this.state;
+    const { displayName, email, password, confirmPassword, error } = this.state;
     return (
       <div className="register">
         <h2 className="title">I do not have an account</h2>
         <span className="title">I do not have an account</span>
+        <span className="register-error">{error.toUpperCase()}</span>
         <form className="register-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
