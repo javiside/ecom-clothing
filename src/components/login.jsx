@@ -3,6 +3,8 @@ import React from "react";
 import FormInput from "./form-input";
 import CustomButton from "./custom-button";
 
+import { signInWithGoogle } from "../firebase/firebase.utils";
+
 import "./login.scss";
 
 class Login extends React.PureComponent {
@@ -46,10 +48,14 @@ class Login extends React.PureComponent {
             label="password"
             value={password}
             handleChange={this.handleChange}
-            requierd
+            required
           />
-
-          <CustomButton type="submit">Login</CustomButton>
+          <div className="buttons">
+            <CustomButton type="submit">Login</CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignin>
+              Sign in with Google
+            </CustomButton>
+          </div>
         </form>
       </div>
     );
