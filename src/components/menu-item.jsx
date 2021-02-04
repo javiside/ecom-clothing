@@ -5,9 +5,10 @@ import "./menu-item.scss";
 
 const MenuItem = ({ title, imageUrl, size, linkUrl }) => (
   <Link to={linkUrl} className={`${size} menu-item`}>
-    <div
+    <img
       className="background-image"
-      style={{ backgroundImage: `url(${imageUrl})` }}
+      src={imageUrl}
+      alt={title}
     />
     <div className="content">
       <h1 className="title">{title.toUpperCase()}</h1>
