@@ -23,6 +23,12 @@
     }
   }
 
+  &:active .content{
+    transform: scale(0.9);
+    outline: 2px solid lightblue;
+    opacity: 0.8;
+  }
+
   &.large {
     height: 380px;
   }
