@@ -4,6 +4,7 @@
     "appspot",
     "ecom",
     "firebaseapp",
-    "firestore"
+    "firestore",
+    "middlewares"
   ]
 }

@@ -63,7 +63,11 @@ class Login extends React.PureComponent {
           />
           <div className="buttons">
             <CustomButton type="submit">LOGIN</CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            <CustomButton
+              type="button"
+              onClick={signInWithGoogle}
+              isGoogleSignIn
+            >
               Sign in with Google
             </CustomButton>
           </div>
