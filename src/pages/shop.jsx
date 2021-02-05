@@ -4,6 +4,8 @@ import SHOP_DATA from "../tempMocks/shop.data";
 
 import CollectionPreview from "../components/collection-preview";
 
+import "../styles/shop.scss";
+
 class ShopPage extends React.PureComponent {
   constructor(props) {
     super(props);

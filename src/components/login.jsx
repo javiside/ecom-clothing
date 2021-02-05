@@ -5,7 +5,7 @@ import CustomButton from "./custom-button";
 
 import { auth, signInWithGoogle } from "../firebase/firebase.utils";
 
-import "./login.scss";
+import "../styles/login.scss";
 
 class Login extends React.PureComponent {
   constructor(props) {

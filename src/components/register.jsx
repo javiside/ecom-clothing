@@ -5,7 +5,7 @@ import CustomButton from "./custom-button";
 
 import { auth, createUserProfileDocument } from "../firebase/firebase.utils";
 
-import "./register.scss";
+import "../styles/register.scss";
 
 class Register extends React.PureComponent {
   constructor(props) {

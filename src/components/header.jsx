@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { auth } from "../firebase/firebase.utils";
+import CartIcon from "./cart/cart-icon";
+import CartDropdown from "./cart/cart-dropdown";
 
 import { ReactComponent as Logo } from "../assets/crown.svg";
 
-import "./header.scss";
+import "../styles/header.scss";
 
-const Header = (props) => {
+const Header = ({ currentUser, hidden }) => {
   return (
     <header className="header">
       <Link to="/">
@@ -21,7 +23,7 @@ const Header = (props) => {
         <Link className="option" to="/contact">
           CONTACT
         </Link>
-        {props.currentUser ? (
+        {currentUser ? (
           <div className="option" onClick={() => auth.signOut()}>
             LOGOUT
           </div>
@@ -30,13 +32,16 @@ const Header = (props) => {
             LOGIN
           </Link>
         )}
+        <CartIcon />
       </div>
+      {hidden ? null : <CartDropdown />}
     </header>
   );
 };
 
-const mapStateToProps = ({ user: { currentUser } }) => ({
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
   currentUser,
+  hidden,
 });
 
 export default connect(mapStateToProps)(Header);

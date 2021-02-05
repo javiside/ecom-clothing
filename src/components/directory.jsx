@@ -4,7 +4,7 @@ import DIRECTORY_DATA from "../tempMocks/directory.data.js";
 
 import MenuItem from "./menu-item";
 
-import "./directory.scss";
+import "../styles/directory.scss";
 
 class Directory extends React.PureComponent {
   constructor(props) {
@@ -14,6 +14,7 @@ class Directory extends React.PureComponent {
       sections: DIRECTORY_DATA
     };
   }
+
   render() {
     return (
       <div className="directory-menu">
