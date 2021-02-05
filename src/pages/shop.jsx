@@ -4,7 +4,7 @@ import SHOP_DATA from "../tempMocks/shop.data";
 
 import CollectionPreview from "../components/collection-preview";
 
-import "../styles/shop.scss";
+import "../styles/pages/shop.scss";
 
 class ShopPage extends React.PureComponent {
   constructor(props) {

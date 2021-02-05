@@ -3,7 +3,7 @@ import React from "react";
 import Login from "../components/login";
 import Register from "../components/register";
 
-import "../styles/login-and-register.scss";
+import "../styles/pages/login-and-register.scss";
 
 const LoginAndRegister = () => (
   <div className="login-and-register">
