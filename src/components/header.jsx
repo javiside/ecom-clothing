@@ -6,6 +6,8 @@ import { auth } from "../firebase/firebase.utils";
 import CartIcon from "./cart/cart-icon";
 import CartDropdown from "./cart/cart-dropdown";
 
+import { getHeaderProps } from "../redux/header.selectors";
+
 import { ReactComponent as Logo } from "../assets/crown.svg";
 
 import "../styles/header.scss";
@@ -39,9 +41,4 @@ const Header = ({ currentUser, hidden }) => {
   );
 };
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-  currentUser,
-  hidden,
-});
-
-export default connect(mapStateToProps)(Header);
+export default connect(getHeaderProps)(Header);

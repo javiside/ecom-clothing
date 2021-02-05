@@ -10,6 +10,7 @@ import Header from "./components/header";
 import LoginAndRegister from "./pages/login-and-register";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
+import { getAppProps } from "./redux/user/user.selectors";
 
 class App extends React.PureComponent {
   unsubscribeFromAuth = null;
@@ -56,12 +57,4 @@ class App extends React.PureComponent {
   }
 }
 
-const mapStateToProps = ({ user: { currentUser } }) => ({
-  currentUser,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(getAppProps, { setCurrentUser })(App);
