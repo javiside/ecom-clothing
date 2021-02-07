@@ -1,29 +1,18 @@
 import React from "react";
+import { connect } from "react-redux";
 
-import DIRECTORY_DATA from "../tempMocks/directory.data.js";
+import { getDirectoryProps } from "../redux/directory/directory.selectors";
 
 import MenuItem from "./menu-item";
 
 import "../styles/directory.scss";
 
-class Directory extends React.PureComponent {
-  constructor(props) {
-    super(props);
+const Directory = ({ sections }) => (
+  <div className="directory-menu">
+    {sections.map(({ id, ...otherSectionProps }) => (
+      <MenuItem key={id} {...otherSectionProps} />
+    ))}
+  </div>
+);
 
-    this.state = {
-      sections: DIRECTORY_DATA
-    };
-  }
-
-  render() {
-    return (
-      <div className="directory-menu">
-        {this.state.sections.map(({ id, ...otherSectionProps }) => (
-          <MenuItem key={id} {...otherSectionProps} />
-        ))}
-      </div>
-    );
-  }
-}
-
-export default Directory;
+export default connect(getDirectoryProps)(Directory);

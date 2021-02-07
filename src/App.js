@@ -8,6 +8,7 @@ import HomePage from "./pages/homepage";
 import ShopPage from "./pages/shop";
 import LoginAndRegister from "./pages/login-and-register";
 import CheckoutPage from "./pages/checkout";
+import CollectionPage from "./pages/collection.jsx";
 
 import Header from "./components/header";
 
@@ -46,7 +47,8 @@ class App extends React.PureComponent {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/shop" component={ShopPage} />
+          <Route exact path="/shop" component={ShopPage} />
+          <Route path="/shop/:collectionId" component={CollectionPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
           <Route exact path="/login">
             {this.props.currentUser ? (
