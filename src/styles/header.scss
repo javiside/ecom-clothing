@@ -9,6 +9,10 @@
     height: 100%;
     width: 70px;
     padding: 25px;
+
+    &:hover {
+      filter: invert(1) drop-shadow(0 2px 2px black);
+    }
   }
 
   .options {
@@ -22,6 +26,11 @@
     .option {
       padding: 10px 15px;
       cursor: pointer;
+
+      &:hover {
+        color: blue;
+        text-shadow: 0 0 2px black;
+      }
     }
   }
 }

@@ -18,7 +18,7 @@ class Login extends React.PureComponent {
     };
   }
 
-  handleSubmit = async (event) => {
+  handleSubmit = async event => {
     event.preventDefault();
 
     const { email, password } = this.state;
@@ -31,7 +31,7 @@ class Login extends React.PureComponent {
     }
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     const { value, name } = event.target;
     this.setState({ [name]: value });
   };
@@ -63,11 +63,7 @@ class Login extends React.PureComponent {
           />
           <div className="buttons">
             <CustomButton type="submit">LOGIN</CustomButton>
-            <CustomButton
-              type="button"
-              onClick={signInWithGoogle}
-              isGoogleSignIn
-            >
+            <CustomButton type="button" onClick={signInWithGoogle} isGoogleSignIn>
               Sign in with Google
             </CustomButton>
           </div>

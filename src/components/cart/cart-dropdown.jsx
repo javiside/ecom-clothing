@@ -12,9 +12,7 @@ const CartDropdown = ({ cartItems, toggleCartHidden }) => (
   <div className="cart-dropdown">
     <div className="cart-items">
       {cartItems.length ? (
-        cartItems.map((cartItem) => (
-          <CartItem key={cartItem.id} item={cartItem} />
-        ))
+        cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />)
       ) : (
         <span className="empty-message">Your cart is empty</span>
       )}
@@ -25,6 +23,4 @@ const CartDropdown = ({ cartItems, toggleCartHidden }) => (
   </div>
 );
 
-export default connect(getCartDropdownProps, { toggleCartHidden })(
-  CartDropdown
-);
+export default connect(getCartDropdownProps, { toggleCartHidden })(CartDropdown);

@@ -1,11 +1,7 @@
 import { React } from "react";
 import { connect } from "react-redux";
 
-import {
-  clearItemFromCart,
-  addItem,
-  removeItem,
-} from "../redux/cart/cart.actions";
+import { clearItemFromCart, addItem, removeItem } from "../redux/cart/cart.actions";
 
 import "../styles/checkout-item.scss";
 
@@ -27,16 +23,11 @@ const CheckoutItem = ({ cartItem, clearItemFromCart, addItem, removeItem }) => {
         </div>
       </span>
       <span className="price">{price}</span>
-      <div
-        className="remove-button"
-        onClick={() => clearItemFromCart(cartItem)}
-      >
+      <div className="remove-button" onClick={() => clearItemFromCart(cartItem)}>
         &#10005;
       </div>
     </div>
   );
 };
 
-export default connect(null, { clearItemFromCart, addItem, removeItem })(
-  CheckoutItem
-);
+export default connect(null, { clearItemFromCart, addItem, removeItem })(CheckoutItem);

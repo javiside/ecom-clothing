@@ -12,6 +12,7 @@
 
   &:hover {
     cursor: pointer;
+    box-shadow: 0 0 4px blue;
 
     & .background-image {
       transform: scale(1.2);
@@ -20,10 +21,15 @@
 
     & .content {
       opacity: 0.9;
+
+      & .title {
+        color: blue;
+        text-shadow: 0 0 1px black;
+      }
     }
   }
 
-  &:active .content{
+  &:active .content {
     transform: scale(0.9);
     outline: 2px solid lightblue;
     opacity: 0.8;

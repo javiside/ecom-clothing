@@ -8,8 +8,6 @@ import HomePage from "./pages/homepage";
 import ShopPage from "./pages/shop";
 import LoginAndRegister from "./pages/login-and-register";
 import CheckoutPage from "./pages/checkout";
-import CollectionPage from "./pages/collection.jsx";
-
 import Header from "./components/header";
 
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
@@ -21,11 +19,11 @@ class App extends React.PureComponent {
 
   componentDidMount() {
     const { setCurrentUser } = this.props;
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
-        userRef.onSnapshot((snapShot) => {
+        userRef.onSnapshot(snapShot => {
           setCurrentUser({
             id: snapShot.id,
             ...snapShot.data(),
@@ -47,15 +45,10 @@ class App extends React.PureComponent {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/shop" component={ShopPage} />
-          <Route path="/shop/:collectionId" component={CollectionPage} />
+          <Route path="/shop" component={ShopPage} />
           <Route exact path="/checkout" component={CheckoutPage} />
           <Route exact path="/login">
-            {this.props.currentUser ? (
-              <Redirect to="/" />
-            ) : (
-              <LoginAndRegister />
-            )}
+            {this.props.currentUser ? <Redirect to="/" /> : <LoginAndRegister />}
           </Route>
         </Switch>
       </>

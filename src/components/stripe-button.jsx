@@ -1,8 +1,8 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 
-const onToken = (token) => {
-  console.log(token);
+const onToken = token => {
+  //console.log(token);
   alert("Payment Successful");
 };
 
@@ -17,7 +17,7 @@ const StripeCheckoutButton = ({ price }) => {
       name="Ecom Clothing"
       billingAddress
       shippingAddress
-      image=""
+      image="https://sendeyo.com/up/d/f3eb2117da"
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"

@@ -20,7 +20,7 @@ class Register extends React.PureComponent {
     };
   }
 
-  handleSubmit = async (event) => {
+  handleSubmit = async event => {
     event.preventDefault();
     const { displayName, email, password, confirmPassword } = this.state;
 
@@ -30,10 +30,7 @@ class Register extends React.PureComponent {
     }
 
     try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
+      const { user } = await auth.createUserWithEmailAndPassword(email, password);
       await createUserProfileDocument(user, { displayName });
       this.setState({
         displayName: "",
@@ -47,7 +44,7 @@ class Register extends React.PureComponent {
     }
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };

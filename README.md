@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# E-commerce app with React v17, Redux, Hooks, GraphQL, ContextAPI, node, Stripe and Firebase #
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https://javi-ecom.herokuapp.com)
 
-## Available Scripts
+### Commit history
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Initialize project using Create React App
+2. Created project with create react app and added files for homepage
+3. Divided the homepage into smaller components, finished styling the menu-item component
+4. Update the menu-items to navigate with Link instead of withRouter HOC
+5. Added shop page and collection-preview/item components
+6. Added header component and links to home, shop and contact pages
+7. Added login and registration pages and custom input and button components
+8. Integrated firebase into application, created sign in page with sign in component and sign in with google
+9. Implemented firebase utils, included ability to store authenticated users into the firestore database
+10. Finished login handleSubmit method
+11. Added redux, implemented userReducer and userActions to header and app components
+12. Added redirect to homepage if user is signed in
+13. Moved styles to folder, added cartIcon and cartDropdown components, also implemented cart reducer
+14. Updated shop data with new data, updated cart utils to group items in cart reducer
+15. Created cart-item component and connected cart dropdown with cartItems reducer
+16. Included reselect and replaced cart selectors with memoized selectors
+17. Added header and user selectors, replaced mapStateToProps with getProps selectors and mapDispatchToProps with object
+18. Added checkout page, checkout item component and updated checkout to use selectors
+19. Added addItem and removeItem functionality to arrows in the checkout item component
+20. Added redux-persist and persisting the cart store
+21. Moved shop and directory data into their own reducer, created respective selectors and updated corresponding components with new redux flow for directory/shop
+22. Finished stripe integration, updated favicon and icon
