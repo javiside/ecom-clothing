@@ -1,4 +1,4 @@
-# E-commerce app with React v17, Redux, Hooks, GraphQL, ContextAPI, node, Stripe and Firebase #
+# E-commerce app with React v17, Redux, Hooks, GraphQL, ContextAPI, node, Stripe and Firebase
 
 See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https://javi-ecom.herokuapp.com)
 
@@ -26,3 +26,5 @@ See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https:
 20. Added redux-persist and persisting the cart store
 21. Moved shop and directory data into their own reducer, created respective selectors and updated corresponding components with new redux flow for directory/shop
 22. Finished stripe integration, updated favicon and icon
+23. Implement code that pulls in the shop data from firestore and stores it into the shop reducer. Also included redux-thunk and withSpinner HOC
+24. Updated code to leverage containers for collections-overview and collection-page components

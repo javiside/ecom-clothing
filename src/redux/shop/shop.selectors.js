@@ -32,6 +32,13 @@ export const getCollectionPageProps = createSelector([selectCollection], collect
   collection,
 }));
 
+export const getOverviewContainerProps = createSelector(
+  [getIsCollectionFetching],
+  isCollectionFetching => ({
+    isLoading: isCollectionFetching,
+  })
+);
+
 export const getCollectionsOverviewProps = createSelector(
   [selectCollectionsAsArray],
   collections => ({
@@ -43,9 +50,9 @@ export const getCollectionsPreviewProps = createSelector([selectHeadItems], item
   items,
 }));
 
-export const getShopPageProps = createSelector(
-  [getIsCollectionFetching],
-  isCollectionFetching => ({
-    isCollectionFetching,
+export const getCollectionContainerProps = createSelector(
+  [selectCollection],
+  collection => ({
+    isLoading: !collection,
   })
 );

@@ -50,6 +50,7 @@ class App extends React.PureComponent {
           <Route exact path="/login">
             {this.props.currentUser ? <Redirect to="/" /> : <LoginAndRegister />}
           </Route>
+          <Redirect path="*" to="/" />
         </Switch>
       </>
     );
