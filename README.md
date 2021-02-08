@@ -2,6 +2,8 @@
 
 See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https://javi-ecom.herokuapp.com)
 
+![ecomDemo](https://raw.githubusercontent.com/javiside/ecom-clothing/main/src/assets/demo.gif)
+
 ### Commit history
 
 1. Initialize project using Create React App
@@ -28,3 +30,4 @@ See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https:
 22. Finished stripe integration, updated favicon and icon
 23. Implement code that pulls in the shop data from firestore and stores it into the shop reducer. Also included redux-thunk and withSpinner HOC
 24. Updated code to leverage containers for collections-overview and collection-page components
+25. Moved currentUser value from App state to redux, converted Login and Register components to use Hooks

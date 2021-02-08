@@ -5,13 +5,13 @@ import { connect } from "react-redux";
 import CollectionsOverviewContainer from "../components/collections/collections-overview.container";
 import CollectionContainer from "./collection.container";
 
-import { fetchCollectionsStartAsync } from "../redux/shop/shop.actions";
+import { fetchCollections } from "../redux/shop/shop.actions";
 
 import "../styles/pages/shop.scss";
 
 class ShopPage extends React.PureComponent {
   componentDidMount() {
-    this.props.fetchCollectionsStartAsync();
+    this.props.fetchCollections();
   }
 
   render() {
@@ -24,4 +24,4 @@ class ShopPage extends React.PureComponent {
   }
 }
 
-export default connect(null, { fetchCollectionsStartAsync })(ShopPage);
+export default connect(null, { fetchCollections })(ShopPage);
