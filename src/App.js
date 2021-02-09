@@ -6,6 +6,7 @@ import "./styles/App.scss";
 
 import HomePage from "./pages/homepage";
 import ShopPage from "./pages/shop";
+import ContactPage from "./pages/contact";
 import LoginAndRegister from "./pages/login-and-register";
 import CheckoutPage from "./pages/checkout";
 import Header from "./components/header";
@@ -27,6 +28,7 @@ const App = ({ currentUser, setCurrentUser, callUnsubscribeFromAuth }) => {
         <Route exact path="/" component={HomePage} />
         <Route path="/shop" component={ShopPage} />
         <Route exact path="/checkout" component={CheckoutPage} />
+        <Route exact path="/contact" component={ContactPage} />
         <Route exact path="/login">
           {currentUser ? <Redirect to="/" /> : <LoginAndRegister />}
         </Route>

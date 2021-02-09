@@ -33,3 +33,5 @@ See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https:
 25. Moved currentUser value from App state to redux, converted Login and Register components to use Hooks
 26. Added media queries to accommodate mobile devices
 27. Converted last two class components to hooks, added firestore unsubscribe methods on useEffect cleanup functions
+28. Added clearCart action to stripe payment successful, moved registration message error from alert to setError hook
+29. Fixed collection page mobile style, added basic contact page

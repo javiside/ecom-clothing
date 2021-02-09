@@ -1,0 +1,112 @@
+.os-win .LI-badge-container.vertical.light {
+  font-family: Arial, sans-serif;
+}
+.os-mac .LI-badge-container.vertical.light {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.os-linux .LI-badge-container.vertical.light {
+  font-family: "Helvetica Neue", Helvetica, FreeSans, "Liberation Sans", Helmet, Arial, sans-serif;
+}
+
+.LI-badge-container.vertical.light {
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 3px, 0.8);
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: center;
+  font-family: sans-serif;
+  width: 250px;
+  margin: 80px auto;
+
+  & .LI-col {
+    position: relative;
+  }
+  & .more-info {
+    margin: 0;
+    padding: 0;
+  }
+
+  & .LI-view-profile {
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2px;
+    padding: 0 13px;
+    height: 31px;
+    line-height: 31px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #058dc7;
+    background-color: transparent;
+    border-color: #008cc9;
+    white-space: nowrap;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    margin-top: 20px;
+  }
+
+  & .LI-profile-pic {
+    border-radius: 50%;
+    position: absolute;
+    border: 4px solid;
+    border-color: #fff;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    top: 30px;
+    left: 75px;
+  }
+
+  & .LI-profile-pic-container {
+    position: relative;
+    text-decoration: none;
+    line-height: normal;
+    letter-spacing: normal;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: #e6e9ec;
+    height: 85px;
+    width: 100%;
+  }
+
+  & .LI-field {
+    list-style-type: none;
+    font-size: 14px;
+    color: #3e3f41;
+    font-weight: normal;
+
+    & a {
+      display: inline-block;
+      font-weight: bold;
+      color: rgb(76, 76, 224);
+      line-height: 30px !important;
+    }
+  }
+
+  & .LI-logo {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 8px;
+  }
+
+  & .LI-name a {
+    font-size: 22px;
+    font-weight: normal;
+    text-decoration: none;
+  }
+
+  & .LI-header {
+    padding-top: 15px;
+    margin-top: 50px;
+  }
+
+  & .LI-title {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    list-style-type: none;
+  }
+}
