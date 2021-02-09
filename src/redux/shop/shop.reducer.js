@@ -4,10 +4,19 @@ const INITIAL_STATE = {
   collections: {},
   isCollectionFetching: true,
   errorMessage: null,
+  unsubscribeFromSnapShot: () => {},
 };
 
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case ShopActionTypes.STORE_UNSUBSCRIBE_FROM_SNAPSHOT:
+      return {
+        ...state,
+        unsubscribeFromSnapShot: action.payload,
+      };
+    case ShopActionTypes.CALL_UNSUBSCRIBE_FROM_SNAPSHOT:
+      state.unsubscribeFromSnapShot();
+      return state;
     case ShopActionTypes.FETCH_COLLECTIONS_START:
       return {
         ...state,

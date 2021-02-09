@@ -2,16 +2,25 @@ import { UserActionTypes } from "./user.types";
 
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 
-export const setCurrentUserStart = () => ({
+const storeUnsubscribeFromAuth = unsubscribeFromAuth => ({
+  type: UserActionTypes.STORE_UNSUBSCRIBE_FROM_AUTH,
+  payload: unsubscribeFromAuth,
+});
+
+export const callUnsubscribeFromAuth = () => ({
+  type: UserActionTypes.CALL_UNSUBSCRIBE_FROM_AUTH,
+});
+
+const setCurrentUserStart = () => ({
   type: UserActionTypes.SET_USER_START,
 });
 
-export const setCurrentUserSuccess = user => ({
+const setCurrentUserSuccess = user => ({
   type: UserActionTypes.SET_USER_SUCCESS,
   payload: user,
 });
 
-export const setCurrentUserFailure = errorMessage => ({
+const setCurrentUserFailure = errorMessage => ({
   type: UserActionTypes.SET_USER_FAILURE,
   payload: errorMessage,
 });
@@ -19,7 +28,7 @@ export const setCurrentUserFailure = errorMessage => ({
 export const setCurrentUser = () => {
   return dispatch => {
     try {
-      auth.onAuthStateChanged(async userAuth => {
+      const unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
         dispatch(setCurrentUserStart(userAuth));
 
         if (userAuth) {
@@ -37,6 +46,7 @@ export const setCurrentUser = () => {
           dispatch(setCurrentUserSuccess(userAuth));
         }
       });
+      dispatch(storeUnsubscribeFromAuth(unsubscribeFromAuth));
     } catch (err) {
       dispatch(setCurrentUserFailure(err.message));
     }

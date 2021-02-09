@@ -5,16 +5,25 @@ import {
   convertCollectionsSnapshotToMap,
 } from "../../firebase/firebase.utils";
 
-export const fetchCollectionsStart = () => ({
+const storeUnsubscribeFromSnapshot = unsubscribeFromSnapshot => ({
+  type: ShopActionTypes.STORE_UNSUBSCRIBE_FROM_SNAPSHOT,
+  payload: unsubscribeFromSnapshot,
+});
+
+export const callUnsubscribeFromSnapshot = () => ({
+  type: ShopActionTypes.CALL_UNSUBSCRIBE_FROM_SNAPSHOT,
+});
+
+const fetchCollectionsStart = () => ({
   type: ShopActionTypes.FETCH_COLLECTIONS_START,
 });
 
-export const fetchCollectionsSuccess = collectionsMap => ({
+const fetchCollectionsSuccess = collectionsMap => ({
   type: ShopActionTypes.FETCH_COLLECTIONS_SUCCESS,
   payload: collectionsMap,
 });
 
-export const fetchCollectionsFailure = errorMessage => ({
+const fetchCollectionsFailure = errorMessage => ({
   type: ShopActionTypes.FETCH_COLLECTIONS_FAILURE,
   payload: errorMessage,
 });
@@ -25,10 +34,11 @@ export const fetchCollections = () => {
       const collectionRef = firestore.collection("collections");
       dispatch(fetchCollectionsStart());
 
-      collectionRef.onSnapshot(async snapshot => {
+      const unsubscribeFromSnapshot = collectionRef.onSnapshot(async snapshot => {
         const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
         dispatch(fetchCollectionsSuccess(collectionsMap));
       });
+      dispatch(storeUnsubscribeFromSnapshot(unsubscribeFromSnapshot));
     } catch (err) {
       dispatch(fetchCollectionsFailure(err.message));
     }

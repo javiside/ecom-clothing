@@ -4,9 +4,19 @@ const INITIAL_STATE = {
   currentUser: null,
   isUserFetching: false,
   errorMessage: null,
+  unsubscribeFromAuth: () => {},
 };
+
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case UserActionTypes.STORE_UNSUBSCRIBE_FROM_AUTH:
+      return {
+        ...state,
+        unsubscribeFromAuth: action.payload,
+      };
+    case UserActionTypes.CALL_UNSUBSCRIBE_FROM_AUTH:
+      state.unsubscribeFromAuth();
+      return state;
     case UserActionTypes.SET_USER_START:
       return {
         ...state,
