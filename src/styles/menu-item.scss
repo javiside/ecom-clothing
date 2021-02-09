@@ -1,7 +1,7 @@
 .menu-item {
   position: relative;
   min-width: 30%;
-  height: 240px;
+  height: 18vw;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -36,7 +36,12 @@
   }
 
   &.large {
-    height: 380px;
+    height: 25vw;
+
+    @media screen and (max-width: 800px) {
+      height: 50vw;
+      width: 100%;
+    }
   }
 
   &:first-child {
@@ -45,6 +50,11 @@
 
   &:last-child {
     margin-left: 7.5px;
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 50vw;
+    width: 100%;
   }
 
   .background-image {

@@ -3,8 +3,17 @@
   flex-direction: column;
   width: 380px;
 
+  .heading {
+    @media screen and (max-width: 800px) {
+      margin: 0;
+    }
+  }
+
   .title {
     margin: 10px 0;
+    @media screen and (max-width: 800px) {
+      margin: 0;
+    }
   }
 
   .register-error {
@@ -14,5 +23,13 @@
     text-shadow: 0 0 1px black;
     height: 45px;
     color: red;
+
+    @media screen and (max-width: 800px) {
+      // background: red;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
   }
 }

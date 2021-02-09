@@ -31,3 +31,4 @@ See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https:
 23. Implement code that pulls in the shop data from firestore and stores it into the shop reducer. Also included redux-thunk and withSpinner HOC
 24. Updated code to leverage containers for collections-overview and collection-page components
 25. Moved currentUser value from App state to redux, converted Login and Register components to use Hooks
+26. Added media queries to accommodate mobile devices

@@ -10,10 +10,13 @@ $main-color: black;
 .group {
   position: relative;
   margin: 45px 0;
+  @media screen and (max-width: 800px) {
+    margin: 0;
+  }
 
   .form-input {
     background: none;
-    background-color: white;
+    background-color: rgba(180, 180, 255, 0.05);
     color: $sub-color;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
@@ -33,7 +36,7 @@ $main-color: black;
     }
   }
 
-  input[type='password'] {
+  input[type="password"] {
     letter-spacing: 0.3em;
   }
 

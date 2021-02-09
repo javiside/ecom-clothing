@@ -47,8 +47,8 @@ const Register = () => {
   };
   return (
     <div className="register">
-      <h2 className="title">I do not have an account</h2>
-      <span className="title">I do not have an account</span>
+      <h2 className="heading">I do not have an account</h2>
+      <span className="title">Register with your name, email and password</span>
       <span className="register-error">{error.toUpperCase()}</span>
       <form className="register-form" onSubmit={handleSubmit}>
         <FormInput

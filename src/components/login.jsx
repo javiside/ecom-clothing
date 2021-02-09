@@ -33,8 +33,8 @@ const Login = () => {
 
   return (
     <div className="login">
-      <h2>I already have an account</h2>
-      <span>Login with your email and password</span>
+      <h2 className="heading">I already have an account</h2>
+      <span className="title">Login with your email and password</span>
       <span className="login-error">{error.toUpperCase()}</span>
       <form onSubmit={handleSubmit}>
         <FormInput
