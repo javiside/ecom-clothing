@@ -10,10 +10,6 @@ import reportWebVitals from "./reportWebVitals";
 
 import { store, persistor } from "./redux/store";
 
-window.onbeforeunload = function () {
-  return "Are you sure you want to leave?";
-};
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

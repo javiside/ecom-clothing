@@ -23,7 +23,7 @@ const Register = () => {
     event.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("password don't match");
+      setError("Passwords don't match");
       return;
     }
 
@@ -43,6 +43,7 @@ const Register = () => {
 
   const handleChange = event => {
     const { name, value } = event.target;
+    setError("");
     setUserInfo({ ...userInfo, [name]: value });
   };
   return (
