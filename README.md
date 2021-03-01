@@ -35,3 +35,4 @@ See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https:
 27. Converted last two class components to hooks, added firestore unsubscribe methods on useEffect cleanup functions
 28. Added clearCart action to stripe payment successful, moved registration message error from alert to setError hook
 29. Fixed collection page mobile style, added basic contact page
+30. Added function header comments to selectors, added test folder and fixed app test case
