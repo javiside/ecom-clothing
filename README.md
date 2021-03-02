@@ -36,3 +36,7 @@ See the deployed (heroku) version here: [https://javi-ecom.herokuapp.com](https:
 28. Added clearCart action to stripe payment successful, moved registration message error from alert to setError hook
 29. Fixed collection page mobile style, added basic contact page
 30. Added function header comments to selectors, added test folder and fixed app test case
+31. Added enzyme, react adapter 17 and test files, fixed jest empty snapshots issue
+32. Added coverage image
+
+![coverage](https://raw.githubusercontent.com/javiside/ecom-clothing/main/src/assets/coverage.png)
