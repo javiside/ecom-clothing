@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput should mount the component correctly 1`] = `
+<div
+  className="group"
+>
+  <input
+    className="form-input"
+  />
+</div>
+`;

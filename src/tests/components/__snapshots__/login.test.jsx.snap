@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should mount the component correctly 1`] = `
+<div
+  className="login"
+>
+  <h2
+    className="heading"
+  >
+    I already have an account
+  </h2>
+  <span
+    className="title"
+  >
+    Login with your email and password
+  </span>
+  <span
+    className="login-error"
+  />
+  <form
+    onSubmit={[Function]}
+  >
+    <FormInput
+      handleChange={[Function]}
+      label="email"
+      name="email"
+      required={true}
+      type="email"
+      value=""
+    />
+    <FormInput
+      autoComplete="on"
+      handleChange={[Function]}
+      label="password"
+      name="password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <div
+      className="buttons"
+    >
+      <CustomButton
+        type="submit"
+      >
+        LOGIN
+      </CustomButton>
+      <CustomButton
+        isGoogleSignIn={true}
+        onClick={[Function]}
+        type="button"
+      >
+        Sign in with Google
+      </CustomButton>
+    </div>
+  </form>
+</div>
+`;

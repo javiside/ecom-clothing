@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomButton should mount the component correctly 1`] = `
+<button
+  className="custom-button"
+/>
+`;

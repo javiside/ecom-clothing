@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact should mount the component correctly 1`] = `
+<div
+  className="LI-badge-container-vertical-light LI-badge-container vertical light large"
+  dir="ltr"
+>
+  <div
+    className="LI-profile-badge-header LI-name-container"
+  >
+    <div
+      className="LI-col"
+    >
+      <img
+        alt="background"
+        className="LI-profile-pic-container"
+        src="bg.jpg"
+      />
+      <img
+        alt="Francisco M."
+        className="LI-profile-pic"
+        src="pic.jpg"
+      />
+    </div>
+    <div
+      className="LI-col LI-header"
+    >
+      <div
+        className="LI-name"
+      >
+        <a
+          href="https://mx.linkedin.com/in/javiside?trk=profile-badge-name"
+        >
+          Francisco M.
+        </a>
+      </div>
+      <div
+        className="LI-title"
+      >
+        Software Engineer
+      </div>
+    </div>
+  </div>
+  <ul
+    className="more-info"
+  >
+    <li
+      className="LI-field"
+    >
+      <a
+        href="https://www.linkedin.com/company/walmartecommerce?trk=profile-badge-company"
+      >
+        Walmart eCommerce
+      </a>
+    </li>
+    <li
+      className="LI-field"
+    >
+      Sonora State University
+    </li>
+  </ul>
+  <div
+    className="LI-profile-badge-footer"
+  >
+    <a
+      className="LI-view-profile"
+      href="https://mx.linkedin.com/in/javiside?trk=profile-badge-cta"
+    >
+      View profile
+    </a>
+    <span
+      className="LI-logo"
+    >
+      <img
+        alt="LinkedIn"
+        className="LI-icon"
+        src="li.png"
+      />
+    </span>
+  </div>
+</div>
+`;
